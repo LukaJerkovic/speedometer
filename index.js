@@ -12,7 +12,7 @@ let totalMbSpeed = 0;
 let numTests = 1;
 let testCompleted = 0;
 
-let imageApi = 'https://source.unsplash.com/random?topic=nature';
+let imageApi = `https://source.unsplash.com/random?topic=nature&_=${new Date().getTime()}`;
 
 image.onload = async function () {
   endTime = new Date().getTime();
@@ -53,8 +53,8 @@ function calculateSpeed() {
 const runSpeedTest = async () => {
   info.innerHTML = 'Testing...';
 
-  mbSpeed.innerHTML = '<span>Speed in Mbs: </span>';
-  kbSpeed.innerHTML = '<span>Speed in KB: </span>';
+  mbSpeed.innerHTML = '<span>Speed in Mbps: </span>';
+  kbSpeed.innerHTML = '<span>Speed in Kbps: </span>';
   bitSpeed.innerHTML = '<span>Speed in Bit: </span>';
 
   startTime = new Date().getTime();
